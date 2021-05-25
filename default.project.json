@@ -1,0 +1,19 @@
+{
+	"name": "RBPrints",
+	"tree": {
+		"$className": "DataModel",
+
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"RBPrints": {
+				"$path": "src"
+			}
+		},
+
+		"SoundService": {
+			"$properties": {
+				"RespectFilteringEnabled": true
+			}
+		}
+	}
+}
