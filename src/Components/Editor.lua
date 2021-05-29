@@ -17,13 +17,17 @@ function Editor:render()
 		Size = UDim2.new(1, 0, 1, 0),
 
 		[Roact.Event.InputBegan] = function(input)
-			if self.insertMenuRef.current then
-				if input.UserInputType == Enum.UserInputType.MouseButton2 then
-					local insertMenu = self.insertMenuRef.current
+			if self.insertMenuRef:getValue() then
+				if UserInputService:IsMouseButtonPressed("MouseButton2") then
+					local insertMenu = self.insertMenuRef:getValue()
 					local mousePosition = Vector2.new(input.Position.X, input.Position.Y)
 
 					insertMenu.Position = UDim2.new(0, mousePosition.X, 0, mousePosition.Y)
 					insertMenu.Visible = true
+				elseif UserInputService:IsMouseButtonPressed("MouseButton1") then
+					local insertMenu = self.insertMenuRef:getValue()
+
+					insertMenu.Visible = false
 				end
 			end
 		end,
