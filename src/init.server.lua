@@ -19,6 +19,7 @@ local editorWidgetInfo = DockWidgetPluginGuiInfo.new(
 
 local function initializeWidget()
 	editorWidget = plugin:CreateDockWidgetPluginGui("RBPrintsEditorWidget", editorWidgetInfo)
+	editorWidget.Name = "RBPrints GUI"
 
 	Roact.mount(
 		Roact.createElement(EditorComponent, {}),
