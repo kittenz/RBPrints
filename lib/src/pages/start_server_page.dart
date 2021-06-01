@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'editor_page.dart';
+
+import '../routes.dart';
 
 class StartServerPage extends StatelessWidget {
   @override
@@ -19,8 +20,7 @@ class StartServerPage extends StatelessWidget {
               padding: const EdgeInsets.only(top: 20),
               child: ElevatedButton(
                 onPressed: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => EditorPage()));
+                  Navigator.pushNamed(context, Routes.editor);
                 },
                 child: const Text('Start server'),
               ),
