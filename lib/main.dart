@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rbprints/src/screens/start_server.dart';
+import 'package:rbprints/src/routes/start_server.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: Material(
-        child: StartServerScreen(),
+        child: StartServerPage(),
       ),
     );
   }

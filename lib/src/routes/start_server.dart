@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'editor_page.dart';
 
-class StartServerScreen extends StatelessWidget {
+class StartServerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -14,13 +15,12 @@ class StartServerScreen extends StatelessWidget {
                 hintText: 'localhost:4520',
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.only(top: 20),
               child: ElevatedButton(
-                onPressed: () => {
-                  // TODO: implement onPressed
-                  throw new UnimplementedError(),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => EditorPage()));
                 },
                 child: const Text('Start server'),
               ),
