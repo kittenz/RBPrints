@@ -1,0 +1,11 @@
+{
+	/*
+		You shouldn't use 80-character line wrapping. It just makes your code look ugly.
+		it's just stupid to adhere to some style guide meant for terminal. We have GUI applications and widescreen monitors nowadays.
+		And you definitely shouldn't send code in an email body (another reason why some programmers line-wrap their code).
+
+		Welcome to 2021 if you still adhere to the 80-character limit.
+	*/
+	"dart.lineLength": 0,
+	"editor.insertSpaces": false // Also, please use tabs. Pressing backspace is multiple times is stupid.
+}
