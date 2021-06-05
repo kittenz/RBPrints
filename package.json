@@ -1,0 +1,24 @@
+{
+  "name": "rbprints",
+  "version": "0.0.1",
+  "description": "A visual programming language for Roblox. Inspired by UE4 Blueprints.",
+  "main": "index.js",
+  "repository": "https://github.com/kittenz/RBPrints",
+  "author": "kittenz",
+  "license": "UNLICENSED",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "build-app": "cd packages/rbprints-app && yarn build",
+    "start-app": "cd packages/rbprints-app && yarn start"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "eslint": "^7.28.0",
+    "eslint-plugin-react": "^7.24.0",
+    "typescript": "^4.3.2"
+  }
+}
