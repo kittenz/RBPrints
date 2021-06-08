@@ -1,9 +1,11 @@
 import React from 'react';
+import StartServerPage from '../pages/start-server/start-server';
+
 import '../scss/styles.scss';
 
 function App() {
 	return (
-		<h1>Hello, World!</h1>
+		<StartServerPage />
 	);
 }
 
