@@ -1,5 +1,3 @@
-/// <reference types="@rbxts/types/plugin" />
-
 export {};
 
 const toolbar = plugin.CreateToolbar("MyToolbar");
