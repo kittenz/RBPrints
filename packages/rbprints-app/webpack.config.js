@@ -1,8 +1,6 @@
 const path = require('path');
 
-module.exports = {
-	entry: './src/renderer.ts',
-	mode: 'development',
+const commonConfig = {
 	module: {
 		rules: [
 			{
@@ -26,9 +24,39 @@ module.exports = {
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js'],
 	},
+};
+
+const mainConfig = {
+	entry: './src/index.ts',
+	target: 'electron-main',
 	output: {
-		filename: 'bundle.js',
+		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist'),
 		publicPath: './dist/',
 	},
+	...commonConfig,
 };
+
+const preloadConfig = {
+	entry: './src/preload.ts',
+	target: 'electron-preload',
+	output: {
+		filename: 'preload.js',
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: './dist/',
+	},
+	...commonConfig,
+};
+
+const rendererConfig = {
+	entry: './src/renderer.ts',
+	target: 'electron-renderer',
+	output: {
+		filename: 'renderer.js',
+		path: path.resolve(__dirname, 'dist'),
+		publicPath: './dist/',
+	},
+	...commonConfig,
+};
+
+module.exports = [mainConfig, preloadConfig, rendererConfig];

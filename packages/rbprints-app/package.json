@@ -1,8 +1,8 @@
 {
   "name": "rbprints-app",
-  "main": "./dist/index.js",
+  "main": "./dist/main.js",
   "scripts": {
-    "build": "tsc && webpack",
+    "build": "webpack --mode=development",
     "start": "electron ."
   },
   "devDependencies": {
