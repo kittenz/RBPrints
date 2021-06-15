@@ -1,8 +1,19 @@
 export {};
 
-const toolbar = plugin.CreateToolbar("MyToolbar");
-const button = toolbar.CreateButton("MyButton", "", "");
+const toolbar = plugin.CreateToolbar('RBPrints');
+const button = toolbar.CreateButton('EditorButton', '', '', 'Editor');
+
+const widgetInfo = new DockWidgetPluginGuiInfo(
+	Enum.InitialDockState.Right,
+	true,
+	false,
+	200,
+	300,
+	150,
+	150,
+);
 
 button.Click.Connect(() => {
-	print("Button clicked!");
+	let widget = plugin.CreateDockWidgetPluginGui('RBPrintsEditor', widgetInfo);
+	widget.Title = 'RBPrints Editor';
 });
