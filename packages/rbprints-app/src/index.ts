@@ -1,5 +1,8 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain } from 'electron';
 import path from 'path';
+import HttpServer from './lib/server/server';
+
+const server = new HttpServer();
 
 function createWindow() {
 	let mainWindow = new BrowserWindow({
@@ -23,4 +26,10 @@ app.whenReady().then(() => {
 
 app.on('window-all-closed', () => {
 	if (process.platform !== 'darwin') app.quit();
+});
+
+// *** IPC LISTENERS ***
+
+ipcMain.on('server', (event, args) => {
+	if (args[0] === 'start') server.start();
 });
