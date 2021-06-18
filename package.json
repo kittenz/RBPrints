@@ -13,6 +13,7 @@
   "scripts": {
     "build-app": "cd packages/rbprints-app && yarn build",
     "start-app": "cd packages/rbprints-app && yarn start",
+    "build-plugin": "cd packages/rbprints-plugin && rbxtsc build",
     "lint": "eslint . --ext .ts,.tsx"
   },
   "devDependencies": {
